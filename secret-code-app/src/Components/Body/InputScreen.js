@@ -4,18 +4,15 @@ import Input from "./InputRow";
 import classes from "./InputScreen.module.css";
 
 const InputScreen = (props) => {
-  
   const [inputList, setInputList] = useState([]);
-  const enableIndexValue = useSelector(state => state.enableIndex);
-  
-  
-  useEffect(()=>{
-	  const inputList = new Array(8);
-	  inputList.fill(true);
-	  setInputList(inputList);
-  },[enableIndexValue]);
-    
-  
+  const enableIndexValue = useSelector((state) => state.enableIndex);
+
+  useEffect(() => {
+    const inputList = new Array(8);
+    inputList.fill(true);
+    setInputList(inputList);
+  }, [enableIndexValue]);
+
   inputList[enableIndexValue] = false;
 
   return (
@@ -25,7 +22,7 @@ const InputScreen = (props) => {
           <Input
             length={inputList.length}
             disabled={item}
-			dispatch={props.dispatch}
+            dispatch={props.dispatch}
           />
         );
       })}
