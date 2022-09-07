@@ -17,9 +17,10 @@ const InputScreen = (props) => {
 
   return (
     <div className={classes.body}>
-      {inputList.map((item) => {
+      {inputList.map((item, index) => {
         return (
           <Input
+            key={index}
             length={inputList.length}
             disabled={item}
             dispatch={props.dispatch}

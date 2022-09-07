@@ -139,6 +139,7 @@ const Input = (props) => {
         {inputList.map((item, index) => {
           return (
             <input
+              key={index}
               id={index}
               type="number"
               onChange={changeHandler}
@@ -154,9 +155,10 @@ const Input = (props) => {
       </form>
       {showResult &&
         circleList.length !== 0 &&
-        circleList.map((item) => {
+        circleList.map((item, index) => {
           return (
             <div
+              key={index}
               className={classes.circle}
               style={{ backgroundColor: item }}
             ></div>

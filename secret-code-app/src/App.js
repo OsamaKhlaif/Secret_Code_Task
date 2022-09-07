@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import { useDispatch } from "react-redux";
 import classes from "./App.module.css";
 import InputScreen from "./Components/Body/InputScreen";
