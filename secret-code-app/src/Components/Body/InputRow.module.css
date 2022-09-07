@@ -1,0 +1,30 @@
+input{
+    margin: 10px 10px 10px 10px;
+    width: 40px;
+    height: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.input{
+    display: flex;
+    align-items: center;
+}
+
+input{
+    background-color: rgb(255, 196, 153);
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+button{
+    margin-left: 40px;
+}
+
+.circle{
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+    border: 1px solid black;
+}
