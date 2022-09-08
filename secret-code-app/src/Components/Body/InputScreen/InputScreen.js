@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
-import Input from "./InputRow";
+import InputRow from "../InputRow/InputRow";
 import classes from "./InputScreen.module.css";
 
 const InputScreen = (props) => {
@@ -19,7 +19,7 @@ const InputScreen = (props) => {
     <div className={classes.body}>
       {inputList.map((item, index) => {
         return (
-          <Input
+          <InputRow
             key={index}
             length={inputList.length}
             disabled={item}

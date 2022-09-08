@@ -20,11 +20,3 @@ input {
 button {
   margin-left: 40px;
 }
-
-.circle {
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  margin-left: 20px;
-  border: 1px solid black;
-}

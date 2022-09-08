@@ -1,19 +1,17 @@
 import classes from "./InputRow.module.css";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import InputLine from "./InputLine/InputLine";
+import CircleLine from "./CircleLine/CircleLine";
 
-const Input = (props) => {
+const InputRow = (props) => {
   let result = "";
   const [showResult, setShowResult] = useState(false);
   const data = useSelector((state) => state);
   const [circleList, setCircleList] = useState([]);
   const [numberList, setNumberList] = useState([]);
-  const [inputList, setInputList] = useState([]);
 
   useEffect(() => {
-    const inputList = new Array(4);
-    inputList.fill(1);
-    setInputList(inputList);
     if (data.enableIndex === 0) {
       setShowResult(false);
       setCircleList([]);
@@ -130,36 +128,14 @@ const Input = (props) => {
   return (
     <div className={classes.input}>
       <form onSubmit={checkHandler}>
-        {inputList.map((item, index) => {
-          return (
-            <input
-              key={index}
-              id={index}
-              type="number"
-              onChange={changeHandler}
-              value={numberList.length === 0 ? "" : numberList[index]}
-              min="0"
-              max="9"
-              required
-              disabled={props.disabled}
-            />
-          );
-        })}
-        <button disabled={props.disabled}>Check</button>
+        <div className={classes.input}>
+          <InputLine numberList={numberList} changeHandler={changeHandler} />
+          <button disabled={props.disabled}>Check</button>
+        </div>
       </form>
-      {showResult &&
-        circleList.length !== 0 &&
-        circleList.map((item, index) => {
-          return (
-            <div
-              key={index}
-              className={classes.circle}
-              style={{ backgroundColor: item }}
-            ></div>
-          );
-        })}
+      <CircleLine circleList={circleList} showResult={showResult} />
     </div>
   );
 };
 
-export default Input;
+export default InputRow;

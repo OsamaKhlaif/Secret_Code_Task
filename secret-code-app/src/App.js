@@ -1,8 +1,8 @@
 import { useState} from "react";
 import { useDispatch } from "react-redux";
 import classes from "./App.module.css";
-import InputScreen from "./Components/Body/InputScreen";
-import ResultScreen from "./Components/Body/ResultScreen";
+import InputScreen from "./Components/Body/InputScreen/InputScreen";
+import ResultScreen from "./Components/Body/ResultScreen/ResultScreen";
 import Header from "./Components/Header/Header";
 
 const App = () => {
