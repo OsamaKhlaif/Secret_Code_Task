@@ -58,11 +58,6 @@ const Input = (props) => {
               numberIndexData.push(index);
             }
           }
-          //not necessary
-          //if (originalIndexData.length === numberIndexData.length) {
-          //  circle.push("white");
-          //  originalData[item] = "";
-          //} else {
           //here move in user number indexes in user number array.
           for (const index in numberIndexData) {
             //check if the random number indexes array have the user number index, if have pushes blue circle.
@@ -91,7 +86,6 @@ const Input = (props) => {
               }
             }
           }
-          //}
         } else {
           //add white circle because correct number wrong place.
           if (number[item] !== "" && originalData !== "") {
