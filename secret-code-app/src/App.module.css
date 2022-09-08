@@ -1,0 +1,11 @@
+.mainBody{
+  margin: 10% 20%;
+  background-color: rgb(252, 165, 103);
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px 2px rgb(112, 112, 112);
+
+}
+.body{
+  display: flex;
+ 
+}
